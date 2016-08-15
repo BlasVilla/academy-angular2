@@ -7,7 +7,8 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  '@angular2-material': 'vendor/@angular2-material'
+  '@angular2-material': 'vendor/@angular2-material',
+  'ng2-charts': 'vendor/ng2-charts'
 };
 
 /** User packages configuration. */
@@ -37,6 +38,8 @@ materialPkgs.forEach((pkg) => {
   packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
 });
 
+packages['ng2-charts'] = {defaultExtensions: 'js'};
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
@@ -62,9 +65,16 @@ const barrels: string[] = [
   'app/test-material',
   'app/test1',
   'app/test2',
-  'app/computer-details',
-  'app/computer-list',
   'app/welcome-page',
+  'app/chart-demo',
+  'app/bar-chart',
+  'app/usage-report',
+  'app/virtual-machine-details',
+  'app/charts-demo',
+  'app/cluster-list',
+  'app/cluster-details',
+  'app/host-details',
+  'app/usage-report-chart',
   /** @cli-barrel */
 ];
 

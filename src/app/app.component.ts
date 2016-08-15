@@ -55,10 +55,16 @@ export class AppComponent {
   public ngOnInit(): void {
     this._views = [
       {
-        name: 'ComputerList',
-        description: 'Computer List',
-        icon: 'group',
-        route: 'computers'
+        name: 'Charts Demo',
+        description: 'ng2-charts demo',
+        icon: 'trending_up',
+        route: 'chartsdemo'
+      },
+      {
+        name: 'Clusters',
+        description: 'List of clusters',
+        icon: 'dns',
+        route: 'clusters'
       }
     ];
   }

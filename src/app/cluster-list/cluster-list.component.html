@@ -1,0 +1,20 @@
+<md-card>
+  <md-card-title>
+    <span>Clusters</span>
+  </md-card-title>
+
+  <md-divider></md-divider>
+  <md-list>
+    <md-list-item *ngFor="let cluster of clusters$ | async">
+      
+      <button md-icon-button (click)="navToCluster(cluster)">
+        <md-icon md-list-icon>dns</md-icon>
+      </button>
+      
+      <span>[{{cluster.clusterId}}]
+      {{cluster.name}}
+      </span>
+    </md-list-item>
+  </md-list>
+  
+</md-card>

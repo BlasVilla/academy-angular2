@@ -1,0 +1,18 @@
+<md-card *ngIf="cluster">
+  <md-card-title>
+    <span>Cluster '{{cluster.name}}'</span>
+  </md-card-title>
+  
+  <md-divider></md-divider>
+
+  <md-list>
+    <md-list-item *ngFor="let host of hosts$ | async">
+      <button md-icon-button (click)="navToHost(host)">
+        <md-icon md-list-icon>computer</md-icon>
+      </button>
+      <span>
+      {{host.name}}
+      </span>
+    </md-list-item>
+  </md-list>
+</md-card>

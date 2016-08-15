@@ -1,0 +1,23 @@
+<md-card *ngIf="host">
+  <md-card-title>
+    <span>Host '{{host.name}}'</span>
+  </md-card-title>
+  
+  <md-divider></md-divider>
+  <md-list>State: {{host.state | state}}</md-list>
+  <md-list>Processor count: {{host.processorCount}}</md-list>
+  <md-list>Physical memory: {{host.physicalMemory | memory}}</md-list>
+  <md-divider></md-divider>
+
+  <md-list>
+    <md-list-item *ngFor="let vm of vms$ | async">
+      <button md-icon-button (click)="navToVm(vm)">
+        <md-icon md-list-icon>laptop_mac</md-icon>
+      </button>
+      <span>
+      {{vm.name}}
+      </span>
+    </md-list-item>
+  </md-list>
+</md-card>
+
